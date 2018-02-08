@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sara</title>
+    <script src="../../lib/js/react.production.min.js"></script>
+    <script src="../../lib/js/react-dom.production.min.js"></script>
+    <script src="../../lib/js/babel.min.js"></script>
+    <script type="text/babel">
+
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Welcome name="Sara" />
+                    <Welcome name="Cahal" />
+                    <Welcome name="Edite" />
+                </div>
+            );
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        );
+
+    </script>
+
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
