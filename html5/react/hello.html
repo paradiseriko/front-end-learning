@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="../../lib/js/react.production.min.js"></script>
+    <script src="../../lib/js/react-dom.production.min.js"></script>
+    <script src="../../lib/js/babel.min.js"></script>
+</head>
+<body>
+    <div id ='example'></div>
+    <script type="text/babel">
+        function tick() {
+            const element = (
+                <div>
+                    <h1>lei jun</h1>
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                    <h3>are you ok</h3>
+                </div>
+            );
+
+            ReactDOM.render(
+                element,
+                document.getElementById('example')
+            );
+        }
+
+
+
+        function tick2() {
+            const element = (
+                <div>
+                    <h1>leibs</h1>
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                    <h3>are you ok</h3>
+                </div>
+            );
+
+            ReactDOM.render(
+                element,
+                document.getElementById('leijun')
+            );
+        }
+        setInterval(tick, 1000);
+        setInterval(tick2, 1000);
+    </script>
+    <div id ='leijun'></div>
+
+</body>
+</html>
