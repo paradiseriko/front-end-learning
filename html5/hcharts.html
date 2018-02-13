@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dasdas</title>
+    <script src="../lib/js/jquery-3.2.1.min.js"></script>
+    <script src="../lib/highcharts/highcharts.js"></script>
+    <script src="../lib/js/react.production.min.js"></script>
+    <script src="../lib/js/react-dom.production.min.js"></script>
+    <script src="../lib/js/babel.min.js"></script>
+    <script>
+        $(function () {
+            $('#container').highcharts({
+                title: {
+                    text: '月平均降雨量are you ok'
+                },
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'top'
+                },
+                xAxis: {
+                    categories: [
+                        '一月',
+                        '二月',
+                        '三月',
+                        '四月',
+                        '五月',
+                        '六月',
+                        '七月',
+                        '八月',
+                        '九月',
+                        '十月',
+                        '十一月',
+                        '十二月'
+                    ],
+                    crosshair: true
+                },
+                yAxis:[ {
+                    min: 0,
+                    title: {
+                        text: '降雨量',
+                        rotation: 0,
+                        y:-150
+                    },
+                }, {
+                    min: 0,
+                    title: {
+                        text: '降雨ratio (mm)',
+                        rotation: 0,
+                        y:-150
+                    },
+                    opposite: true,
+                    labels:{//y轴刻度文字标签
+                        formatter:function(){
+                            return this.value+'';//y轴加上%
+                        }
+                    }
+                }],
+                series: [{
+                    type: 'column',
+                    name: '2017',
+                    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+                }, {
+                    type: 'column',
+                    name: '2016',
+                    data: [89.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3],
+                    yAxis:1
+                },{
+                    type: 'spline',
+                    name: '平均值',
+                    data: [33, 23.673, 33, 6.333, 3.333],
+                }]
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div id="container"></div>
+
+
+
+<br>
+
+</body>
+</html>

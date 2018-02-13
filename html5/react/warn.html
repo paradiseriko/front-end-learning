@@ -8,6 +8,9 @@
     <script src="../../lib/js/babel.min.js"></script>
 </head>
 <body>
+
+
+
     <script type="text/babel">
         function WarningBanner(props) {
             if (!props.warn) {
@@ -21,7 +24,9 @@
             );
         }
 
+
         class Page extends React.Component {
+
             constructor(props) {
                 super(props);
                 this.state = {showWarning: true}
