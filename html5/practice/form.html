@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <title>QQ注册</title>
+    <meta name="keywords" content="账号注册"/>
+    <meta name="description" content="注册"/>
+    <style type="text/css">
+        .main {
+            width: 500px;
+        }
+
+        /*定义最外面的div宽度。*/
+        .tip {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: right;
+        }
+
+        /*定义第 1～5 行右边 span 标签的样式，display:inline-block;width*/
+        .content {
+            display: inline-block;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            text-align: left;
+        }
+
+        /*定义第 1～5 行右边 span 标签的样式，display:inline-block;设置元素为行内块元素，width属性的设置才能有效。*/
+        .subm {
+            display: inline-block;
+            text-align: center;
+            width: 300px;
+        }
+
+        /*定义按钮所在的span标签的样式。*/
+        .btn_sub {
+            background: #69b946;
+            height: 32px;
+            width: 200px;
+            text-align: center;
+            font: 22px;
+            color: #fff;
+        }
+        /*定义按钮的样式。*/
+    </style>
+
+</head>
+<body>
+
+    <div class="haomaTitle" id=" haomaTitle ">
+        <form action="action.php" method="post">
+            <div class="main">
+                <span class="tip"> 用户名:</span>
+                <span class="content">
+                    <input type="text" name="uname"/>
+                </span>
+                <br/>
+                <span class="tip"> 密码:</span>
+                <span class="content">
+                    <input type="password" name="pwd"/>
+                </span>
+                <br/>
+                <span class="tip">确认密码:</span>
+                <span class="content">
+                    <input type="password" name="repwd"/>
+                </span>
+                <br/>
+                <span class="tip">性别:</span>
+                <span class="content">
+                <input type="radio" name="sex" value="man"/>男
+                <input type="radio" name="sex" value="woman"/>女
+                </span>
+                <br/> <span class="tip">生日年月:</span>
+                <span class="content">
+                    <select name="year">
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                    </select>
+                    <select name="month">
+                        <option value="12">12</option>
+                        <option value="11">11</option>
+                        <option value="10">10</option>
+                        <option value="9">9</option>
+                    </select>
+                </span>
+                <br/>
+
+                时间：<input type="datetime-local">
+                <br/>
+                日期：<input type="date">
+                <br/>
+
+                邮件：<input type="email">
+                <br/>
+                范围：<input type="range" min="1" max="10">
+                <br/>
+                <span class="subm">
+                    <input type="submit" value=" 立即注册" class="btn_sub"/>
+                </span>
+
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

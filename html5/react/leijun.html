@@ -5,43 +5,17 @@
     <title>JunLei</title>
     <script src="../../lib/js/react.production.min.js"></script>
     <script src="../../lib/js/react-dom.production.min.js"></script>
-    <script src="../../lib/js/babel.min.js"></script>
+    <script src="../reactFrontTech/js/babel.min.js"></script>
 </head>
 <body>
-    <div id = 'lei'></div>
-    <br>
-    <div id = 'lei2'></div>
-    <script type="text/babel">
-        function formatName(user) {
-            return (<h1> {user.firstName + ' ' + user.lastName} </h1>);
+<div id="reactContainer"></div>
+<script  type="text/babel">
+    var HelloComponent = React.createClass({
+        render: function () {
+            return React.createElement('h1', null, 'Hello world');
         }
-
-        function formatName2(user) {
-            return (user.firstName + ' ' + user.lastName);
-        }
-
-        const user = {
-            firstName: 'Jun',
-            lastName: 'Lei'
-        };
-
-
-        const element = (
-            <h1>
-             {formatName2(user)}, are you ok!
-        </h1>
-        );
-
-        ReactDOM.render(
-            formatName(user),
-            document.getElementById('lei')
-        );
-
-
-        ReactDOM.render(
-            element,
-            document.getElementById('lei2')
-        );
-    </script>
+    });
+    ReactDOM.render(React.createElement(HelloComponent, null), document.getElementById('reactContainer'));
+</script>
 </body>
 </html>

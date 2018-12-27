@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <form>
+        user:<input type="text">
+        <br>
+        pass:<input type="password">
+        <br>
+        你喜欢的水果有？<br>
+        苹果 <input type="checkbox">
+        西红柿 <input type="checkbox">
+        香蕉 <input type="checkbox">
+        <br>
+        性别：<br>
+        女:<input type="radio" name="sex">
+        男:<input type="radio" name="sex">
+        <br>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <input type="button" value="button">
+        <input type="submit" value="queren">
+    </form>
+    <textarea cols="30" rows="30" placeholder="are you ok"></textarea>
+
+    <form action="http://localhost:8080/dataservice_web_war/api/bjjson/alreadyRead" method="post">
+        user:<input type="text" name="test">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+</html>

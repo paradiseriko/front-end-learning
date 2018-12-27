@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/babel.min.js"></script>
+    <script src="js/react.production.min.js"></script>
+    <script src="js/react-dom.production.min.js"></script>
+</head>
+<body>
+    <div id="reactContainer"></div>
+    <script type="text/babel">
+        var Hello =  React.createElement({        render: function() {          return <h1>Hello world</h1>;        }      });
+        var HelloComponent = function a(){
+                return (<h1> Hello world </h1>);
+            }
+        ;
+
+
+        var content =
+
+        ReactDOM.render(
+            <HelloComponent/>,
+            document.getElementById('reactContainer')
+        );
+    </script>
+</body>
+</html>
