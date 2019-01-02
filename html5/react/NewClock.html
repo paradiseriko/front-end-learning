@@ -8,46 +8,126 @@
     <script src="../reactFrontTech/js/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root1" style="font-size: 20px">阿岳</div><br>
+    <div id="root2" style="font-size: 20px">高鑫23岁</div><br>
+    <div id="root3" style="font-size: 20px">赵敏136</div><br>
+    <button type="button" onclick="f()">秃头哥</button>
+    <button type="button" onclick="f1()">恶搞秃头哥</button>
+    <button type="button" onclick="f2()">23岁</button>
+    <button type="button" onclick="f3()">136</button>
+    <button type="button" onclick="bom()">colse</button>
+
+
+    dom:document object model
+
     <script type="text/babel">
-        class Clock extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {date: new Date()};
-            }
 
-            componentDidMount() {
-                this.timerID = setInterval(
-                    () => this.tick(),
-                    1000
-                );
-            }
+        function bom(){
+            window.close();
+        }
 
-
-            componentWillUnmount() {
-                clearInterval(this.timerID);
-            }
-
-            tick() {
-                this.setState({
-                    date: new Date()
-                });
-            }
-
-            render() {
-                return (
-                    <div>
-                        <h1>Hello, world!</h1>
-                        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-                    </div>
-                );
+        class People{
+            constructor(name,age,sex){
+                this.name = name;
+                this.age=age;
+                this.sex=sex;
+                this.weight;
             }
         }
 
-        ReactDOM.render(
-            <Clock />,
-            document.getElementById('root')
-        );
+        var tutouge = new People("wangjian",28,"male");
+        var gaoxin = new People("gapxin",23,"male");
+        var onethreesix = new People("zhaomin",30,"female");
+
+
+        function f() {
+            var a = document.getElementById("root1");
+
+            var x = "1";
+            var y = 1;
+            var z = null;
+            var v;
+            console.log("x的值"+x+"  x的类型是："+typeof(x) )
+            console.log("y的值"+y+"  y的类型是："+typeof(y) )
+            console.log("z的值"+z+"  z的类型是："+typeof(z) )
+            console.log("v的值"+v+"  v的类型是："+typeof(v) )
+            console.log("秃头哥的值"+tutouge+"  v的类型是："+typeof(tutouge) )
+
+
+            // console.log(a.innerHTML);
+            a.innerHTML= "姓名:"+tutouge.name+" 年龄:"+tutouge.age+"性别："+tutouge.sex+"体重："+tutouge.weight;
+            // console.log(a.innerHTML);
+        }
+
+        function f1(){
+            tutouge.sex="female";
+            tutouge.age=88;
+            var a =document.getElementById("root1");
+            a.innerHTML= "姓名:"+tutouge.name+" 年龄:"+tutouge.age+"性别："+tutouge.sex
+        }
+
+
+        function f2() {
+            var a = "凌空SOHO";
+            // a +=  "： 阿岳";
+            a = a+"：阿岳"
+
+            var b = document.getElementById("root2");
+            console.log("a"+a);
+            b.innerHTML= "姓名:"+gaoxin.name+" 年龄:"+gaoxin.age;
+            // b.innerHTML= a;
+        }
+
+
+        function f3() {
+            var c = document.getElementById("root3");
+            console.log(a.innerHTML);
+            c.innerHTML= "姓名:"+onethreesix.name+" 性别:"+onethreesix.sex;
+        }
+
+
     </script>
+
+
+    <!--<script type="text/babel">-->
+        <!--class Clock extends React.Component {-->
+            <!--constructor(props) {-->
+                <!--super(props);-->
+                <!--this.state = {date: new Date()};-->
+            <!--}-->
+
+            <!--componentDidMount() {-->
+                <!--this.timerID = setInterval(-->
+                    <!--() => this.tick(),-->
+                    <!--1000-->
+                <!--);-->
+            <!--}-->
+
+
+            <!--componentWillUnmount() {-->
+                <!--clearInterval(this.timerID);-->
+            <!--}-->
+
+            <!--tick() {-->
+                <!--this.setState({-->
+                    <!--date: new Date()-->
+                <!--});-->
+            <!--}-->
+
+            <!--render() {-->
+                <!--return (-->
+                    <!--<div>-->
+                        <!--<h1>Hello, world!</h1>-->
+                        <!--<h2>It is {this.state.date.toLocaleTimeString()}.</h2>-->
+                    <!--</div>-->
+                <!--);-->
+            <!--}-->
+        <!--}-->
+
+        <!--ReactDOM.render(-->
+            <!--<Clock />,-->
+            <!--document.getElementById('root')-->
+        <!--);-->
+    <!--</script>-->
 </body>
 </html>
