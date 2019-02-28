@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 在数组 arr 开头添加元素 item。不要直接修改数组 arr，结果返回新的数组-->
+<script>
+    //方法一
+    function prepend(arr, item) {
+        var c = arr.slice();//不能直接修改原数组，所以要拷贝原数组
+        c.unshift(item);//向数组的开头添加一个或更多元素，并返回新的长度
+        return c;
+    }
+</script>
+<script>
+    //方法二
+    function prepend(arr, item) {
+        return [item].concat(arr);}   //concat()不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+</script>
+<script>
+    //方法三
+    function prepend(arr, item) {
+        var a = new Array();
+        for (var i = 0; i < arr.length; i++) {
+            a.push(arr[i]);
+        }
+        a.unshift(item);
+        return a;
+    }
+</script>
+
+<!-- 删除数组 arr 第一个元素。不要直接修改数组 arr，结果返回新的数组-->
+<script>
+    //方法一
+    function curtail(arr) {
+return arr.slice(1)
+    }
+</script>
+<script>
+    //方法二
+    function curtail(arr) {
+        var c = arr.slice(0);
+        c.splice(0, 1);
+        return c;
+    }
+</script>
+<script>
+    //方法三
+    function curtail(arr) {
+        var x=arr.slice();
+        x.shift();
+        return x;
+    }
+</script>
+
+<!--合并数组 arr1 和数组 arr2。不要直接修改数组 arr，结果返回新的数组 -->
+<script>
+    //方法一
+    function concat(arr1, arr2) {
+        return arr1.concat(arr2);
+    }
+</script>
+<script>
+    //方法二
+    function concat(arr1, arr2){
+        var v = arr1.slice();
+        for (var i = 0; i < arr2.length; i++) {
+            v.push(arr2[i]);
+        }
+        return v;
+    }
+</script>
+<script>
+    //方法三
+    function concat(arr1, arr2) {
+        var a = new Array();
+        for (i = 0; i < arr1.length; i++) {
+            a.push(arr1[i]);
+        }
+        for (s = 0; s < arr2.length; s++) {
+            a.push(arr2[s]);
+        }
+        return a;
+    }
+</script>
+
+<!--在数组 arr 的 index 处添加元素 item。不要直接修改数组 arr，结果返回新的数组-->
+<script>
+    //方法一
+    function insert(arr, item, index) {
+        var x=arr.slice();
+        x.splice(index,0,item);
+        return x;
+    }
+</script>
+<script>
+    //方法二
+    function insert(arr, item, index) {
+        var x=arr.concat();
+        x.splice(index,0,item);
+        return x;
+    }
+</script>
+<script>
+    //方法三
+    function insert(arr,item,index) {
+        var w=arr.slice(0,index);
+        return w.concat(item,arr.slice(index));
+    }
+</script>
+
+<!--统计数组 arr 中值等于 item 的元素出现的次数-->
+<script>
+    //方法一
+    function count(arr,item) {
+        var q=0;
+        for(i=0;i<arr.length;i++){
+          if (arr[i]===item){
+              q++;
+          }
+        }
+        return q;
+    }
+</script>
+<script>
+    //方法二
+    function count(arr,item) {
+        return arr.filter(function (c) {
+            return (c==item);
+        }).length;
+    }
+</script>
+</body>
+</html>
